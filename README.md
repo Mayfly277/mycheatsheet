@@ -36,6 +36,31 @@ varnishlog -g request -q "ReqUrl ~ '/?titi' and RespStatus ~ 302"
 varnishlog -g request -q "ReqHeader ~ 127.0.0.1 and ReqHeader ~ localhost.com"
 ```
 
+sed
+---
+- transformer les espaces multiples en espace simple pour utiliser cut
+
+```
+$echo "ma    ligne   avec plusieurs     espaces"| sed 's/  */ /g'
+ma ligne avec plusieurs espaces
+```
+
+- supprimer le dernier caractère : `sed 's/.$//g'`
+
+cut
+---
+- `cut -d ' ' -f 3`
+- -d delimiteur
+- -f le numéro du champ délimité que l'on veut
+
+nombre de ligne dans des fichiers heures par heures
+------
+
+```
+year="2016";month="11";day="02"; for i in {00..23}; do find . -newermt "$year-$month-$day $i:00:00" ! -newermt "$year-$month-$day $i:59:59" -type f | xargs cat | wc -l | xargs echo "$i:00:00-$i:59:59 :"; done
+```
+regroupe les fichiers heures par heures, les concatènes, compte les lignes et renvoie le résultat
+
 Disque usage
 ------------
 - `ncdu`
@@ -47,7 +72,7 @@ CURL
 - -H : Précise des informations dans le header
 - autentification : -u username:password
 - -o /dev/null : pas de sortie
-- -sv pour afficher les headers 
+- -sv pour afficher les headers
 - `curl -o /dev/null -sv <url>` : permet d'afficher les headers en faisant une requète en GET
 
 WGET
