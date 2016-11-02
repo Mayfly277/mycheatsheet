@@ -121,7 +121,7 @@ DNS
 - Trouver ip d'un nom de domaine :
 	+ `dig mydomain.com A`
 - Trouver les Name servers (NS) d'un nom de domaine :
-	+ `git mydomain.com NS`
+	+ `dig mydomain.com NS`
 - Trouver nom de domaine d'une ip (reverse lookup):
 	+ `dig -x IP`
 -Version courte : ajouter `+short`
