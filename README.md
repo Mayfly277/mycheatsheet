@@ -27,6 +27,13 @@ deb http://archive.debian.org/debian squeeze main non-free contrib
 deb http://security.debian.org/ squeeze/updates main contrib non-free
 ```
 
+Service enable/disable
+---------------------
+- sudo update-rc.d myservice defaults
+- sudo update-rc.d -f myservice remove
+- sudo systemctl enable myservice.service
+- sudo systemctl disable myservice.service
+
 VARNISH
 -------
 ```
