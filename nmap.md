@@ -1,4 +1,4 @@
-# Nmap - usefull scans
+# Nmap
 
 ## Top 100
 ```

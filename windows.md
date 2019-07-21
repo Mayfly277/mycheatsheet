@@ -1,4 +1,4 @@
-# Windows usefull commands & pentest
+# Windows
 
 ## users
 
