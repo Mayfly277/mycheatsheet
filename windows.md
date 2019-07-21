@@ -24,12 +24,8 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurentControlSet\Control\Terminal Server" /v 
 ```
 
 - Add firewall authorisation
-```
-netsh.exe advfirewall firewall add rule name="Remote Desktop - User Mode (TCP-In)" dir=in action=allow 
-program="%%SystemRoot%%\system32\svchost.exe" service="TermService" description="Inbound rule for the 
-Remote Desktop service to allow RDP traffic. [TCP 3389] added by LogicDaemon's script" enable=yes 
-profile=private,domain localport=3389 protocol=tcp
-```
+    
+	netsh.exe advfirewall firewall add rule name="Remote Desktop - User Mode (TCP-In)" dir=in action=allow program="%%SystemRoot%%\system32\svchost.exe" service="TermService" description="Inbound rule for the Remote Desktop service to allow RDP traffic. [TCP 3389] added by LogicDaemon's script" enable=yes profile=private,domain localport=3389 protocol=tcp
 
 - Connect to windows RDP
 ```
