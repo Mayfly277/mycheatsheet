@@ -157,5 +157,7 @@ AAAA-%5$08x
 AAAA-41414141   <- show offset 5 with $
 AAAA-%s
 AAAA-���   <- value at 0x08048625
+AA--BB---%5$hx%6$hx
+AA--BB---41414242 <- top 2 bytes at offset 5 and top two bytes at offset 6
 ```
 
