@@ -111,4 +111,10 @@ send(s, b'login_send')
 1094795585
 ```
 
+- decode binary -> string
+```python
+data.decode('utf-8')
+data.decode('utf-8','ignore')
+data.decode('utf-8', 'backslashreplace')
+```
 
