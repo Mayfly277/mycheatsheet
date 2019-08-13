@@ -92,10 +92,17 @@ s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 print(recvuntil(s, b'login:'))
 send(s, b'login_send')
-
 ```
 
-## convert 
+## Convert 
+
+- string <-> int
+```
+>>> chr(65)
+'A'
+>>> ord('A')
+65
+```
 
 - string <-> hex
 ```
@@ -105,10 +112,14 @@ send(s, b'login_send')
 '41414141'
 ```
 
-- hex -> int
+- hex <-> int
 ```
 >>> int('0x41414141', 16)
 1094795585
+>>> hex(65)
+'0x41'
+>>> hex(1094795585)
+'0x41414141'
 ```
 
 - decode binary -> string
