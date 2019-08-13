@@ -153,11 +153,9 @@ data.decode('utf-8', 'backslashreplace')
 ```
 AAAA-%08x-%08x-%08x-%08x-%08x
 AAAA-08048625-00000000-00000000-0000001e-41414141
-
 AAAA-%5$08x
-AAAA-41414141  # <- show offset 5 with $
-
+AAAA-41414141   <- show offset 5 with $
 AAAA-%s
-AAAA-���  # <- value at 0x08048625
+AAAA-���   <- value at 0x08048625
 ```
 
