@@ -139,3 +139,25 @@ data.decode('utf-8','ignore')
 data.decode('utf-8', 'backslashreplace')
 ```
 
+## Format string
+
+- `%x` : show stack value
+- `%s` : show value @stack value
+- `%u` : show int value
+- `%n` : write nb chars already printed @stack value
+- `%hn`: write 2 bytes (16bits) instead of 4 bytes (32bits)
+
+- `$` : used to argument index (example : `%5$08x`)
+
+- Example : 
+```
+AAAA-%08x-%08x-%08x-%08x-%08x
+AAAA-08048625-00000000-00000000-0000001e-41414141
+
+AAAA-%5$08x
+AAAA-41414141  # <- show offset 5 with $
+
+AAAA-%s
+AAAA-���  # <- value at 0x08048625
+```
+
