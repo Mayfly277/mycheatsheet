@@ -23,6 +23,16 @@
 '\xdd\xcc\xbb\xaa\x00\x00\x00\x00'
 ```
 
+- Little indian '<' / big Indian '>' / native '='
+```
+>>> struct.pack('>I',0xAABBCCDD)
+'\xaa\xbb\xcc\xdd'
+>>> struct.pack('<I',0xAABBCCDD)
+'\xdd\xcc\xbb\xaa'
+>>> struct.pack('=I',0xAABBCCDD)
+'\xdd\xcc\xbb\xaa'
+```
+
 ## Bad chars 
 
 ```
