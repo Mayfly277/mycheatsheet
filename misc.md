@@ -169,3 +169,9 @@ Linux desktop raccourcis
 - ~/.local/share/applications
 - ~/.gnome/apps/
 - /usr/local/applications
+
+# TMUX 
+
+- search ctrl+b s
+- next : n
+- previous : shift + n 

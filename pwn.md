@@ -161,3 +161,11 @@ AA--BB---%5$hx%6$hx
 AA--BB---41414242 <- top 2 bytes at offset 5 and top two bytes at offset 6
 ```
 
+## GDB
+
+- set value 0x41414141 at address 0xdeadbeef : `set {int}0xdeadbeef = 0x41414141`
+- show value at address : `x/1x 0xdeadbeef`
+- show string at address : `x/1s 0xdeadbeef`
+
+- pwndbg: 
+  - `context` : print all the context values
