@@ -7,6 +7,7 @@
 - `eu-readelf –section-headers /bin/ps`
 - `readelf -S /bin/ps`
 - `objdump -h /bin/ps`
+- `pwndbg> maintenance info sections`
 
 - show address : `readelf -l /bin/ps`
 
