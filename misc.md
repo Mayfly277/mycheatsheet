@@ -1,6 +1,11 @@
 Linux
 =====
 
+SHOW current ip
+---------------
+- Local : `ip --brief --color addr`
+- Distant : `curl ipecho.net/plain`
+
 SSH
 ----
 - Port forwarding : option -L  
