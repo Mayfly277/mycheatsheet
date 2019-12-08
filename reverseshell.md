@@ -1,5 +1,10 @@
 # ReverseShell
 
+## Windows autocompletion 
+
+- Use `rlwrap`
+- `rlwramp nc -nlvp 4444`
+
 ## Bash
 
 ```bash
