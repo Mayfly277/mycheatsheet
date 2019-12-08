@@ -72,3 +72,6 @@ powershell -ExecutionPolicy Bypass -File c:\temp\change_user.ps1
 runas /user:domain\user cmd.exe
 ```
 
+## Privesc Checker 
+- winPEAS : https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+
