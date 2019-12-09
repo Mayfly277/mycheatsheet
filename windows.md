@@ -1,5 +1,21 @@
 # Windows
 
+## Find AD  
+- Using nmap and dhcp :
+```
+sudo nmap --script broadcast-dhcp-discover -e eth0
+```
+
+- Using nslookup:
+```
+nslookup domainname
+nslookup -type=SRV _ldap._tcp.dc._msdcs.pen.test
+nslookup -type=srv _ldap._tcp.dc._msdcs.<domain> <dns server ip>
+nslookup -type=srv _kerberos._tcp.dc._msdcs.<domain> <dns server ip>
+```
+
+- Enum4linux give the domainname
+
 ## users
 
 Add user 
