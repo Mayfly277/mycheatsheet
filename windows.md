@@ -1,6 +1,10 @@
 # Windows
 
-## Find AD  
+## AD
+ad mindmap :
+![./pentest_ad.svg](./pentest_ad.svg)
+
+## Find AD  
 - Using nmap and dhcp :
 ```
 sudo nmap --script broadcast-dhcp-discover -e eth0
